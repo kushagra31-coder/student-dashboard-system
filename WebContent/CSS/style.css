@@ -1,0 +1,341 @@
+﻿:root {
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --surface-strong: #1a1f36;
+    --text: #1e2236;
+    --muted: #667085;
+    --primary: #3563eb;
+    --primary-soft: #e6edff;
+    --danger: #d92d20;
+    --success: #027a48;
+    --border: #d9e2ec;
+    --radius: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.app-header,
+.hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand,
+.hero-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.hero-nav a,
+.app-nav a,
+.actions a,
+.login-notes p,
+.alert {
+    display: inline-block;
+}
+
+.hero-nav a {
+    margin-left: 18px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.hero-main,
+.app-main,
+.center-panel,
+.login-container {
+    max-width: 1040px;
+    margin: 32px auto;
+    padding: 0 24px;
+}
+
+.hero-intro {
+    background: var(--surface);
+    padding: 42px 32px;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 50px rgba(30, 34, 54, 0.08);
+}
+
+.hero-intro h1 {
+    margin-top: 0;
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.hero-intro p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.hero-actions {
+    margin-top: 28px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.button.secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.hero-cards,
+.card-grid,
+.achievement-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 28px;
+}
+
+.card,
+.overview-card,
+.project-card,
+.achievement-card,
+.section-panel,
+.center-panel,
+.login-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px;
+    box-shadow: 0 18px 40px rgba(30, 34, 54, 0.06);
+}
+
+.card h2,
+.project-card h2,
+.achievement-card h2,
+.section-panel h1,
+.section-panel h2 {
+    margin-top: 0;
+}
+
+.page-footer {
+    text-align: center;
+    margin: 40px auto 24px;
+    color: var(--muted);
+}
+
+.app-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 32px;
+    margin: 0 auto;
+    max-width: 1040px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.app-nav a {
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.app-nav a.active,
+.app-nav a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.section-panel {
+    margin-bottom: 24px;
+}
+
+.section-overview {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.profile-grid div,
+.data-table {
+    border-radius: var(--radius);
+}
+
+.profile-grid div {
+    background: var(--primary-soft);
+    padding: 18px;
+}
+
+.profile-grid strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--muted);
+}
+
+.profile-grid span {
+    display: block;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.data-table th {
+    text-align: left;
+    background: var(--primary-soft);
+}
+
+.bullet-list {
+    list-style: disc inside;
+    padding-left: 0;
+    color: var(--text);
+}
+
+.alert {
+    padding: 18px 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+.alert-info {
+    background: #eef4ff;
+    color: #1d3f9d;
+}
+
+.alert-danger {
+    background: #fee2e2;
+    color: #9b1c1c;
+}
+
+.alert-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.login-container,
+.center-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 110px);
+}
+
+.login-panel,
+.center-panel {
+    max-width: 520px;
+}
+
+.login-panel form {
+    display: grid;
+    gap: 16px;
+}
+
+.login-panel label,
+.contact-form label {
+    font-weight: 600;
+}
+
+.login-panel input,
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #f8fafc;
+}
+
+.contact-form {
+    display: grid;
+    gap: 16px;
+}
+
+.section-panel p,
+.widget p,
+.hero-intro p,
+.hero-cards p,
+.login-notes p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.widget,
+.overview-card {
+    min-height: 180px;
+}
+
+.project-card,
+.achievement-card {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 760px) {
+    .app-header,
+    .hero-header,
+    .app-nav,
+    .hero-intro {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .hero-cards,
+    .card-grid,
+    .section-overview,
+    .profile-grid,
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+}
